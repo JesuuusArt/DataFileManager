@@ -1,0 +1,204 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #E3F2FD;
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    height: 550px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.left-panel {
+    background: url('/assets/image.jpg') no-repeat center center/cover;
+    color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-panel h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Panel derecho */
+.right-panel {
+    background-color: #FFFFFF;
+    flex: 1;
+    padding: 2.5rem;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-panel h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.right-panel p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.right-panel a {
+    color: #388E3C;
+    text-decoration: none;
+}
+
+.right-panel a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+/* Grupo de inputs con íconos */
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    transition: color 0.3s;
+}
+
+.input-group input {
+    width: 88%;
+    padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    background-color: #F9F9F9;
+    color: #333333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+.input-group input:focus + i {
+    color: #4CAF50;
+}
+
+/* Botón de inicio de sesión */
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #388E3C;
+    transform: translateY(-3px);
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.divider span {
+    background-color: #FFFFFF;
+    padding: 0 10px;
+    color: #757575;
+}
+
+.divider:before {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #757575;
+}
+
+/* Botones sociales */
+.social-login {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-btn img {
+    width: 24px;
+}
+
+.google-btn {
+    background-color: #de5a4e;
+    color: white;
+}
+
+.google-btn:hover {
+    background-color: #C1351D;
+    transform: translateY(-3px);
+}
+
+.apple-btn {
+    background-color: #1D1D1F;
+    color: white;
+}
+
+.apple-btn:hover {
+    background-color: #333333;
+    transform: translateY(-3px);
+}
+
+/* Ayuda */
+.help-text {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.help-text a {
+    color: #388E3C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.help-text a:hover {
+    color: #4CAF50;
+}

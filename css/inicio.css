@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E7D32;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #C8E6C9;
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background-color: white;
+    padding: 2.5rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+h2 {
+    color: #2E7D32;
+    border-bottom: 2px solid #C8E6C9;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #BDBDBD;
+    border-radius: 8px;
+    resize: none;
+    font-size: 1rem;
+    background-color: #FAFAFA;
+}
+
+/* Buttons */
+.action-btn {
+    background-color: #2E7D32;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+
+.action-btn:hover {
+    background-color: #388E3C;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Add buttons */
+.add-buttons {
+    display: flex;
+    justify-content: center;  /* Centra los botones */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Advanced operations */
+.advanced-operations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.advanced-operations .action-btn {
+    background-color: #4CAF50;
+    padding: 0.8rem 1.2rem;
+    min-width: 150px;
+}
+
+.advanced-operations .action-btn:hover {
+    background-color: #45A049;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #2E7D32;
+    color: white;
+}
+
+th, td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: #F1F8E9;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.divider span {
+    background-color: white;
+    padding: 0 15px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #2E7D32;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+}
+
+.footer-content a {
+    color: #BBDEFB;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-content a:hover {
+    color: #81D4FA;
+    text-decoration: underline;
+}

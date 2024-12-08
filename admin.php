@@ -1,17 +1,34 @@
+<?php
+session_start();
+
+// Verificar si la sesión está activa y si el usuario está autenticado
+if (!isset($_SESSION['username'])) {
+    // Redirigir al index.php si no está autenticado
+    header('Location: index.php');
+    exit();
+}
+
+// Verificar si el usuario tiene el rol adecuado para acceder a la página (si es necesario)
+if ($_SESSION['role_id'] !== 1) {
+    // Si no es administrador, mostrar mensaje de acceso denegado
+    echo "Acceso denegado. Solo los Administradores pueden acceder a esta página.";
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiDrive - Admin</title>
-    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="./css/admin.css">
 </head>
 <body>
     <header>
         <div class="logo">📂 MiDrive - Admin</div>
         <nav>
-            <a href="/adminFiles.html">Gestionar Archivos</a>
-            <a href="logout.php">Cerrar Sesión</a>
+            <a href="php/logout.php">Cerrar Sesión</a>
         </nav>
     </header>
 

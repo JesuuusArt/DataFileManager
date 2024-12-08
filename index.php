@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -18,15 +18,15 @@
             <h2>Iniciar sesión</h2>
             <p>¿No tienes una cuenta? <a href="#">Crear cuenta</a></p>
 
-            <form id="login-form" action="login.php" method="POST">
+            <form id="login-form" action="php/login.php" method="POST">
                 <div class="input-group">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <input type="text" required name="username" placeholder="Correo electrónico o Nombre de usuario">
                 </div>
 
                 <div class="input-group">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <input type="password" required name="password" placeholder="Contraseña">
                 </div>
 
                 <div class="terms">
@@ -36,7 +36,7 @@
 
                 <br>
 
-                <button type="submit" class="login-btn">Iniciar sesión</button>
+                <input type="submit" class="login-btn" value="Iniciar Sesion"></input>
 
                 <div class="divider">
                     <span>O inicia sesión con</span>
@@ -44,10 +44,10 @@
 
                 <div class="social-login">
                     <button type="button" class="social-btn google-btn">
-                        <img src="/assets/google.png" alt="Google" aria-label="Iniciar sesión con Google"> Google
+                        <img src="./assets/google.png" alt="Google" aria-label="Iniciar sesión con Google"> Google
                     </button>
                     <button type="button" class="social-btn apple-btn">
-                        <img src="/assets/apple.png" alt="Apple" aria-label="Iniciar sesión con Apple"> Apple
+                        <img src="./assets/apple.png" alt="Apple" aria-label="Iniciar sesión con Apple"> Apple
                     </button>
                 </div>
 
@@ -56,5 +56,6 @@
 
         </div>
     </div>
+    
 </body>
 </html>

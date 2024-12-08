@@ -1,17 +1,34 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username']) || $_SESSION['role_id'] != 2) {
+    header("Location: index.php");
+    exit();
+}
+
+require_once './php/connection.php';
+$connection = new Connection();
+$pdo = $connection->connect();
+
+$sql = "SELECT id, username FROM usuarios";
+$stmt = $pdo->query($sql);
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Drive</title>
-    <link rel="stylesheet" href="/css/inicio.css">
+    <link rel="stylesheet" href="./css/inicio.css">
 </head>
 <body>
     <header>
         <div class="logo">📂 MiDrive</div>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="logout.php">Cerrar Sesión</a>
+            <a href="php/logout.php">Cerrar Sesión</a>
         </nav>
     </header>
 
@@ -62,7 +79,7 @@
         </div>
     </footer>
 
-    <script src="/js/inicio.js"></script>
+    <script src="./js/inicio.js"></script>
 
 </body>
 </html>

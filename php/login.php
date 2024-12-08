@@ -1,43 +1,45 @@
 <?php
+require_once '../php/connection.php';
 session_start();
-require 'conexion.php'; // Conexión a la base de datos
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
+    var_dump($_POST); // Ver los datos que llegan del formulario
+
+    $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Validar entrada
-    if (empty($email) || empty($password)) {
-        die("Por favor, completa todos los campos.");
-    }
+    try {
+        $connection = new Connection();
+        $pdo = $connection->connect();
 
-    // Consulta para buscar al usuario
-    $stmt = $conn->prepare("SELECT id, nombre, email, password, rol FROM usuarios WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+        $sql = "SELECT * FROM usuarios WHERE username = :username";
+        $stsm = $pdo->prepare($sql);
+        $stsm->execute(['username' => $username]);
+        $user = $stsm->fetch(PDO::FETCH_ASSOC);
 
-    if ($result->num_rows === 1) {
-        $user = $result->fetch_assoc();
-
-        // Verificar la contraseña
-        if (password_verify($password, $user['password'])) {
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['nombre'] = $user['nombre'];
-            $_SESSION['rol'] = $user['rol'];
-
-            // Redirigir según el rol
-            if ($user['rol'] === 'admin') {
-                header("Location: admin.html");
+        if ($user && hash('sha256', $password) === $user['password']) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['role_id'] = $user['role_id'];
+        
+            if ($user['role_id'] == "1") {
+                header('Location: ../admin.php');
+                exit();
+            } else if ($user['role_id'] == "2") {
+                header('Location: ../inicio.php');
+                exit();
             } else {
-                header("Location: inicio.html");
+                echo "Acceso Denegado";
+                exit();
             }
-            exit();
         } else {
-            die("Contraseña incorrecta.");
-        }
-    } else {
-        die("Usuario no encontrado.");
+            $error_message = "Credenciales Incorrectas";
+            echo $error_message;
+        } 
+
+    } catch (\Throwable $th) {
+        echo "Error al Iniciar Sesión: " . $th->getMessage();
+        exit;
     }
 }
 ?>

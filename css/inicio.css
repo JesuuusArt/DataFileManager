@@ -86,10 +86,21 @@ textarea {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.action-btn .edit-btn-tb{
+    background-color: #ccbd1d;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+
 /* Add buttons */
 .add-buttons {
     display: flex;
-    justify-content: center;  /* Centra los botones */
+    justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -110,6 +121,17 @@ textarea {
 
 .advanced-operations .action-btn:hover {
     background-color: #45A049;
+}
+
+td .edit-btn-tb{
+    background-color: #2E7D32;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
 }
 
 /* Table */
@@ -170,3 +192,4 @@ footer {
     color: #81D4FA;
     text-decoration: underline;
 }
+

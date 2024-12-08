@@ -74,7 +74,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 MiDrive. Todos los derechos reservados.</p>
-            <p>Desarrollado por <a href="https://github.com/JesuuusArt">@JesuuusArt</a>
+            <p>Desarrollado por <a href="https://github.com/JesuuusArt">@JesuuusArt</a></p>
             <p><a href="https://www.instagram.com/jxsuusart/">Contacto</a> | <a href="#">Política de Privacidad</a></p>
         </div>
     </footer>

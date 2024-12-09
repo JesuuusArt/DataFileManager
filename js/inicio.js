@@ -112,8 +112,8 @@ const actualizarTabla = () => {
         fila.innerHTML = `
             <td>${archivo}</td>
             <td>
-                <button class="action-btn edit-btn-tb">Editar</button>
-                <button class="action-btn delete-btn-tb">Eliminar</button>
+                <button class="edit-btn-tb">Editar</button>
+                <button class="delete-btn-tb">Eliminar</button>
             </td>`;
         tbody.appendChild(fila);
 

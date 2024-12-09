@@ -68,6 +68,41 @@ textarea {
     background-color: #FAFAFA;
 }
 
+/* Estilos para los botones dentro de la tabla */
+.edit-btn-tb {
+    background-color: #ff9800;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-btn-tb:hover {
+    background-color: #8b5709;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn-tb {
+    background-color: #D32F2F;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete-btn-tb:hover {
+    background-color: #7d1f1f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Buttons */
 .action-btn {
     background-color: #2E7D32;
@@ -84,17 +119,6 @@ textarea {
     background-color: #388E3C;
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.action-btn .edit-btn-tb{
-    background-color: #ccbd1d;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    font-size: 1rem;
 }
 
 /* Add buttons */
@@ -123,17 +147,6 @@ textarea {
     background-color: #45A049;
 }
 
-td .edit-btn-tb{
-    background-color: #2E7D32;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    font-size: 1rem;
-}
-
 /* Table */
 table {
     width: 100%;
@@ -149,10 +162,6 @@ th, td {
     padding: 1rem;
     border: 1px solid #ddd;
     text-align: left;
-}
-
-tbody tr:hover {
-    background-color: #F1F8E9;
 }
 
 /* Divider */
